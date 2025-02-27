@@ -1,0 +1,55 @@
+package com.itesm.infrastructure.persistence;
+
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "persona")
+public class PersonaEntity {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+    private String name;
+    private String uuid;
+    private String email;
+
+    public PersonaEntity() {
+    }
+
+    public PersonaEntity(String name, String uuid, String email) {
+        this.name = name;
+        this.uuid = uuid;
+        this.email = email;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getUuid() {
+        return uuid;
+    }
+
+    public void setUuid(String uuid) {
+        this.uuid = uuid;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+}
