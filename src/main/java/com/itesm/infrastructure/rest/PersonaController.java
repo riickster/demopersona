@@ -21,7 +21,6 @@ public class PersonaController {
     }
 
     @GET
-    @Path("/all")
     public List<Persona> findAll(){
         List<Persona> response=listPersonasUseCase.execute();
         return response;
